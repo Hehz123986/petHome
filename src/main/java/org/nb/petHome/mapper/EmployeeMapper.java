@@ -27,10 +27,10 @@ public interface EmployeeMapper {
 
     /*修改*/
     @Update("update t_employee set " +
-            "username=#{username},email=#{email},phone=#{phone},password=#{password},age=#{age}," +
-            "did=#{did}" +
-            "where id=#{id}")
+            " username=#{username}, email=#{email},phone=#{phone},password=#{password},age=#{age}" +
+            " where id=#{id}")
     void update(Employee employee);
+
 
 
     /*查询在职*/
@@ -39,6 +39,6 @@ public interface EmployeeMapper {
 
     /*根据id查员工*/
     @Select("select * from t_employee where id=#{id}")
-    Employee findById(long id);
+    Employee findById(Long id);
 
 }

@@ -64,7 +64,7 @@ public class EmployeeService implements IEmployeeService {
     }
 
     @Override
-    public Employee findById(long id) {
+    public Employee findById(Long id) {
         return employeeMapper.findById(id);
     }
 

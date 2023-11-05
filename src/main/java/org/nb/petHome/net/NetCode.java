@@ -28,10 +28,20 @@ public class NetCode {
     /**
      * 用户名不能为空
      */
-    public static final int USERNAME_INVALID =0x14 ;
+    public static final int USERNAME_INVALID = 0x14;
     /**
      * 邮箱不能为空
      */
-    public static final int EMAIL_INVALID =0x15 ;
-    public static final int DEPARTMENT_ID_INVALID =0x15 ;
+    public static final int EMAIL_INVALID = 0x15;
+    public static final int DEPARTMENT_ID_INVALID = 0x16;
+    /**
+     * 无效的店铺名
+     */
+    public static final int SHOP_NAME_INVALID = 0x17;
+    /**
+     * 无效的地址
+     */
+    public static final int SHOP_ADDRESS_INVALID = 0x18;
+    public static final int SHOP_LOGO_INVALID = 0x19;
+
 }

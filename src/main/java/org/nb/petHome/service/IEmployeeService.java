@@ -19,6 +19,6 @@ public interface IEmployeeService {
 
     List<Employee> findEmployees();
 
-    Employee findById(long id);
+    Employee findById(Long id);
 
 }

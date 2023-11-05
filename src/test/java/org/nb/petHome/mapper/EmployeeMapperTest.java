@@ -41,15 +41,15 @@ public class EmployeeMapperTest {
 
     @Test
     public void updateTest() {
-        Employee e = new Employee();
-        e.setId(2L);
+        Employee e = employeeMapper.findById(323l);
         e.setUsername("wu");
         e.setEmail("908@qq.com");
         e.setPhone("123456");
         e.setPassword("123456");
         e.setAge(27);
         e.setDid(13L);
-        System.out.println(1);
+        employeeMapper.update(e);
+        System.out.println(e);
     }
 
 

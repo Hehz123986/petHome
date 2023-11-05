@@ -22,5 +22,12 @@ public class EmployeeServiceTest {
     @Autowired
     private EmployeeService employeeService;
 
+    @Test
+    public void updateTest() {
+     Employee employee=  employeeService.findById(323l);
+        System.out.println(employee);
+     employee.setUsername("hhhhh");
+     employeeService.update(employee);
+    }
 
 }
