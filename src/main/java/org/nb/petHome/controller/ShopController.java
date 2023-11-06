@@ -1,5 +1,7 @@
 package org.nb.petHome.controller;
 
+import org.nb.petHome.common.ShopQuery;
+import org.nb.petHome.common.Urls;
 import org.nb.petHome.entity.Department;
 import org.nb.petHome.entity.Employee;
 import org.nb.petHome.entity.Shop;
@@ -11,10 +13,10 @@ import org.nb.petHome.service.IShopService;
 import org.nb.petHome.utils.MD5Util;
 import org.nb.petHome.utils.ResultGenerator;
 import org.nb.petHome.utils.StringUtil;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @description:TODO类描述
@@ -22,17 +24,16 @@ import org.springframework.web.bind.annotation.RestController;
  * @data: 2023/11/3
  **/
 @RestController
-@RequestMapping("/shop")
 public class ShopController {
 
     private IShopService iShopService;
 
-
+@Autowired
     public ShopController(IShopService iShopService) {
         this.iShopService = iShopService;
     }
 
-    @PostMapping("/register")
+    @PostMapping(value = Urls.SHOP_REGISTER_URL)
     public NetResult shopRegister(@RequestBody Shop shop) {
         if (StringUtil.isEmpty(shop.getName())) {
             return ResultGenerator.genErrorResult(NetCode.SHOP_NAME_INVALID, "店铺名不能为空");
@@ -59,12 +60,12 @@ public class ShopController {
         return ResultGenerator.genSuccessResult();
     }
 
-    @RequestMapping("/list")
+    @RequestMapping(value = Urls.SHOP_LIST_URL)
     public NetResult list() {
         return ResultGenerator.genSuccessResult(iShopService.list());
     }
 
-    @PostMapping("/delete")
+    @PostMapping(value = Urls.SHOP_DELETE_URL)
     public NetResult delete(Long id) {
         try {
             iShopService.remove(id);
@@ -75,7 +76,7 @@ public class ShopController {
         }
     }
 
-    @PostMapping("/auditFailure")
+    @PostMapping(value = Urls.SHOP_AUDIT_FAILURE_URL)
     public NetResult auditFailure(Long id) {
         try {
             iShopService.auditFailure(id);
@@ -86,7 +87,7 @@ public class ShopController {
         }
     }
 
-    @PostMapping("/successfulAudit")
+    @PostMapping(value = Urls.SHOP_SUCCESS_AUDIT_URL)
     public NetResult successfulAudit(Long id) {
         try {
             iShopService.successfulAudit(id);
@@ -98,7 +99,7 @@ public class ShopController {
     }
 
 
-    @PostMapping("/update")
+    @PostMapping(value = Urls.SHOP_UPDATE_URL)
     public NetResult shopUpdate(@RequestBody Shop shop) {
         try {
             if (StringUtil.isEmpty(shop.getName())) {
@@ -116,5 +117,15 @@ public class ShopController {
             e.printStackTrace();
             return ResultGenerator.genErrorResult(NetCode.UPDATE_DEPARTMENT_ERROR, "修改失败！" + e.getMessage());
         }
+    }
+    @PostMapping(value = Urls.SHOP_PAGING_URL)
+    public NetResult paging(@RequestParam("page") int page, @RequestParam("pageSize") int pageSize){
+        int count = iShopService.count();
+        int offset = (page-1) * pageSize;
+        List<Shop> shopList = iShopService.paging(offset,pageSize);
+        ShopQuery shopQuery=new ShopQuery();
+        shopQuery.total=count;
+        shopQuery.shopList=shopList;
+        return ResultGenerator.genSuccessResult(shopQuery);
     }
 }

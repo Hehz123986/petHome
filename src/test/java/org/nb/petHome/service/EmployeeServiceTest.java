@@ -27,7 +27,8 @@ public class EmployeeServiceTest {
      Employee employee=  employeeService.findById(323l);
         System.out.println(employee);
      employee.setUsername("hhhhh");
-     employeeService.update(employee);
+    // employeeService.update(employee);
+        System.out.println(1);
     }
 
 }

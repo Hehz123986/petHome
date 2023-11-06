@@ -1,5 +1,6 @@
 package org.nb.petHome.service;
 
+import org.apache.ibatis.annotations.Param;
 import org.nb.petHome.entity.Shop;
 
 import java.util.List;
@@ -16,4 +17,6 @@ public interface IShopService {
     void successfulAudit(Long id);
     void auditFailure(Long id);
     void update(Shop shop);
+    List<Shop> paging( int offset, int pageSize);
+    int count();
 }

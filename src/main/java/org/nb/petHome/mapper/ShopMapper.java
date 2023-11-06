@@ -47,4 +47,10 @@ public interface ShopMapper {
 
     @Select("select * from t_shop where id=#{id}")
     Shop  findById(Long id);
+
+    @Select("select * from t_shop limit #{offset}, #{pageSize}")
+    List<Shop> paging(@Param("offset") int offset, @Param("pageSize") int pageSize);
+
+    @Select("SELECT COUNT(*) FROM t_shop")
+    int count();
 }

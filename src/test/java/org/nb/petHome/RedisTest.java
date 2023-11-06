@@ -1,62 +1,50 @@
-/*
 package org.nb.petHome;
 
 import org.junit.Test;
-import redis.clients.jedis.Jedis;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Map;
-import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
-*
+/**
  * @description:TODO类描述
  * @author: hzh
- * @data: 2023/11/2
- *
-
+ * @data: 2023/11/6
+ **/
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class RedisTest {
-    @Test
-    public void test() {
-        Jedis jedis = new Jedis("localhost");
-        //获取redis中的所有键
-        Set<String> keys = jedis.keys("*");
-        for(String s : keys){
-            System.out.println(s);
-        }
-        //删除redis中的所有键
-     //   jedis.flushDB();
-        //判断一个键是否存在
-     //   System.out.println(jedis.exists("myKey"));
-        //返回值得数据类型
-      //  System.out.println(jedis.type("runoobkey"));
-      //  System.out.println(jedis.type("myKey"));
-    }
 
+    @Autowired
+    private StringRedisTemplate redisTemplate;
 
     @Test
-    public void test1() {
-
-        Map<String, String> hash = jedis.hgetAll("myHash");
-        for (Map.Entry<String, String> entry : hash.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
-        }
+    public void setRedis() {
+        //缓存中最常用的方法
+        redisTemplate.opsForValue().set("first","siwei");
+        //设置缓存过期时间为30   单位：秒　　　　
+        redisTemplate.opsForValue().set("second","siweiWu",30, TimeUnit.SECONDS);
+        System.out.println("存入缓存成功");
     }
 
     @Test
-    public void test2() {
-        Jedis jedis = new Jedis("localhost");
-        // 添加元素到List中
- jedis.lpush("mylist", "java");
-        jedis.lpush("mylist", "python");
-        jedis.lpush("mylist", "java");
-        jedis.lpush("mylist", "golang");
-
-        // 查询指令位置
-     //   Long position = jedis.lpos("foo", "list1");
-        // 输出查询结果
-        System.out.println();
-
+    public void getRedis(){
+        String first = redisTemplate.opsForValue().get("first");
+        String second = redisTemplate.opsForValue().get("second");
+        System.out.println("取出缓存中first的数据是:"+first);
+        System.out.println("取出缓存中second的数据是:"+second);
     }
 
-
+    /**
+     * 根据key 删除缓存
+     */
+    @Test
+    public void delRedis() {
+        //根据key删除缓存
+        Boolean first = redisTemplate.delete("first");
+        System.out.println("是否删除成功:"+first);
+    }
 }
-*/

@@ -40,5 +40,8 @@ public interface EmployeeMapper {
     /*根据id查员工*/
     @Select("select * from t_employee where id=#{id}")
     Employee findById(Long id);
+     /*登录 */
+    @Select("select * from t_employee where username=#{username} and password=#{password}")
+    Employee login(Employee employee);
 
 }

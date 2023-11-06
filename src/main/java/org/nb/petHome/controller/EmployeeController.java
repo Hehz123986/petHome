@@ -1,5 +1,6 @@
 package org.nb.petHome.controller;
 
+import org.nb.petHome.common.Urls;
 import org.nb.petHome.entity.Department;
 import org.nb.petHome.entity.Employee;
 import org.nb.petHome.net.NetCode;
@@ -19,22 +20,21 @@ import java.util.List;
  * @data: 2023/11/1
  **/
 @RestController
-@RequestMapping("/employee")
 public class EmployeeController {
 
     private IDepartmentService iDepartmentService;
     private IEmployeeService iEmployeeService;
 
 
-    public EmployeeController(IDepartmentService iDepartmentService,IEmployeeService iEmployeeService){
+    public EmployeeController(IDepartmentService iDepartmentService, IEmployeeService iEmployeeService) {
         this.iDepartmentService = iDepartmentService;
-        this.iEmployeeService=iEmployeeService;
+        this.iEmployeeService = iEmployeeService;
     }
 
-    @PostMapping("/add")
-    public NetResult add(@RequestBody (required =false) Employee employee) {
+    @PostMapping(value = Urls.EMPLOYEE_ADD_URL)
+    public NetResult add(@RequestBody(required = false) Employee employee) {
         if (StringUtil.isEmpty(employee.getPhone())) {
-            return ResultGenerator.genErrorResult(NetCode.PHONE_INVALID,"手机号不能为空");
+            return ResultGenerator.genErrorResult(NetCode.PHONE_INVALID, "手机号不能为空");
         }
         if (StringUtil.isEmpty(employee.getUsername())) {
             return ResultGenerator.genErrorResult(NetCode.USERNAME_INVALID, "用户名不能为空");
@@ -56,23 +56,23 @@ public class EmployeeController {
         return ResultGenerator.genSuccessResult(employee);
     }
 
-    @PostMapping("/delete")
-    public NetResult delete(Long id){
+    @PostMapping(value = Urls.EMPLOYEE_DELETE_URL)
+    public NetResult delete(Long id) {
         try {
             iEmployeeService.remove(id);
             return ResultGenerator.genSuccessResult(id);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            return ResultGenerator.genErrorResult(NetCode.REMOVE_DEPARTMENT_ERROR,"删除员工失败！"+e.getMessage());
+            return ResultGenerator.genErrorResult(NetCode.REMOVE_DEPARTMENT_ERROR, "删除员工失败！" + e.getMessage());
         }
     }
 
-    @PostMapping("/update")
+    @PostMapping(value = Urls.EMPLOYEE_UPDATE_URL)
     public NetResult update(@RequestBody Employee employee) {
         System.out.println(employee);
         try {
             if (StringUtil.isEmpty(employee.getPhone())) {
-                return ResultGenerator.genErrorResult(NetCode.PHONE_INVALID,"手机号不能为空");
+                return ResultGenerator.genErrorResult(NetCode.PHONE_INVALID, "手机号不能为空");
             }
             if (StringUtil.isEmpty(employee.getUsername())) {
                 return ResultGenerator.genErrorResult(NetCode.USERNAME_INVALID, "用户名不能为空");
@@ -95,12 +95,26 @@ public class EmployeeController {
         }
     }
 
-        @GetMapping ("/list")
-        public NetResult list(){
-            List<Employee> employeeList = iEmployeeService.findEmployees();
-            return ResultGenerator.genSuccessResult(employeeList);
-        }
+    @GetMapping(value = Urls.EMPLOYEE_LIST_URL)
+    public NetResult list() {
+        List<Employee> employeeList = iEmployeeService.findEmployees();
+        return ResultGenerator.genSuccessResult(employeeList);
+    }
 
+    @PostMapping(value = Urls.EMPLOYEE_LOGIN_URL)
+    public NetResult login(@RequestBody Employee employee) {
+        if (StringUtil.isEmpty(employee.getUsername())) {
+            return ResultGenerator.genErrorResult(NetCode.USERNAME_INVALID, "用户名不能为空");
+        }
+        if (StringUtil.isEmpty(employee.getPassword())) {
+            return ResultGenerator.genErrorResult(NetCode.PASSWORD_INVALID, "密码不能为空");
+        }
+        employee.setPassword(MD5Util.MD5Encode(employee.getPassword(), "utf-8"));
+        if(iEmployeeService.login(employee)!=null){
+            return ResultGenerator.genSuccessResult("登录成功");
+        }
+        return ResultGenerator.genFailResult("账号或密码错误");
+    }
 
 
 }

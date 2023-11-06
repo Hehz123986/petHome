@@ -68,4 +68,9 @@ public class EmployeeService implements IEmployeeService {
         return employeeMapper.findById(id);
     }
 
+    @Override
+    public Employee login(Employee employee) {
+        return employeeMapper.login(employee);
+    }
+
 }

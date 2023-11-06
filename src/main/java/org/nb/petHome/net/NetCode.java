@@ -44,4 +44,5 @@ public class NetCode {
     public static final int SHOP_ADDRESS_INVALID = 0x18;
     public static final int SHOP_LOGO_INVALID = 0x19;
 
+    public static final int PASSWORD_INVALID =0x20 ;
 }

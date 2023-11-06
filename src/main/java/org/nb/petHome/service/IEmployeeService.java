@@ -21,4 +21,6 @@ public interface IEmployeeService {
 
     Employee findById(Long id);
 
+    Employee login(Employee employee);
+
 }
