@@ -3,6 +3,7 @@ package org.nb.petHome.controller;
 import org.nb.petHome.common.Urls;
 import org.nb.petHome.entity.Department;
 import org.nb.petHome.entity.Employee;
+import org.nb.petHome.interceptor.TokenInterceptor;
 import org.nb.petHome.net.NetCode;
 import org.nb.petHome.net.NetResult;
 import org.nb.petHome.service.IDepartmentService;
@@ -10,9 +11,16 @@ import org.nb.petHome.service.IEmployeeService;
 import org.nb.petHome.utils.MD5Util;
 import org.nb.petHome.utils.ResultGenerator;
 import org.nb.petHome.utils.StringUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @description:TODO类描述
@@ -24,6 +32,9 @@ public class EmployeeController {
 
     private IDepartmentService iDepartmentService;
     private IEmployeeService iEmployeeService;
+    private RedisTemplate redisTemplate;
+
+    private Logger logger = LoggerFactory.getLogger(EmployeeController.class);
 
 
     public EmployeeController(IDepartmentService iDepartmentService, IEmployeeService iEmployeeService) {
@@ -110,10 +121,19 @@ public class EmployeeController {
             return ResultGenerator.genErrorResult(NetCode.PASSWORD_INVALID, "密码不能为空");
         }
         employee.setPassword(MD5Util.MD5Encode(employee.getPassword(), "utf-8"));
-        if(iEmployeeService.login(employee)!=null){
-            return ResultGenerator.genSuccessResult("登录成功");
+        Employee e=iEmployeeService.login(employee);
+        if(e==null){
+            return ResultGenerator.genFailResult("账号或密码错误");
         }
-        return ResultGenerator.genFailResult("账号或密码错误");
+        else {
+            String token= UUID.randomUUID().toString();
+            logger.info("token__"+token);
+            e.setToken(token);
+            e.setPassword(null);
+            redisTemplate.opsForValue().set(token,e,30, TimeUnit.MINUTES);
+            return ResultGenerator.genSuccessResult(e);
+        }
+
     }
 
 

@@ -1,5 +1,6 @@
 package org.nb.petHome.service;
 
+import org.nb.petHome.entity.Employee;
 import org.nb.petHome.net.NetResult;
 
 /**
@@ -12,4 +13,6 @@ public interface IUserService {
      * 发送二维码
      */
     NetResult sendRegisterCode(String phone);
+
+    NetResult adminLogin(Employee employee);
 }

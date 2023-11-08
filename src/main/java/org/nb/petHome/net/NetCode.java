@@ -45,4 +45,13 @@ public class NetCode {
     public static final int SHOP_LOGO_INVALID = 0x19;
 
     public static final int PASSWORD_INVALID =0x20 ;
+    /**
+     * token错误，非法请求
+     */
+    public static final int TOKEN_NOT_EXIST =0x21 ;
+
+    /**
+     * token失效，过期
+     */
+    public static final int TOKEN_INVALID =0x22 ;
 }

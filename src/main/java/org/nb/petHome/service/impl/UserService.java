@@ -2,19 +2,24 @@ package org.nb.petHome.service.impl;
 
 
 import org.nb.petHome.entity.CodeResBean;
+import org.nb.petHome.entity.Employee;
+import org.nb.petHome.mapper.EmployeeMapper;
 import org.nb.petHome.net.NetCode;
 import org.nb.petHome.net.NetResult;
 import org.nb.petHome.service.IUserService;
+import org.nb.petHome.utils.MD5Util;
 import org.nb.petHome.utils.RegexUtil;
 import org.nb.petHome.utils.ResultGenerator;
 import org.nb.petHome.utils.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -28,9 +33,13 @@ public class UserService implements IUserService {
     private Logger logger= (Logger) LoggerFactory.getLogger(this.getClass());
 
     private RedisService redisService;
+    private EmployeeMapper employeeMapper;
+    private RedisTemplate redisTemplate;
     @Autowired
-    public UserService(RedisService redisService) {
+    public UserService(RedisService redisService,EmployeeMapper employeeMapper,RedisTemplate redisTemplate) {
         this.redisService = redisService;
+        this.employeeMapper=employeeMapper;
+        this.redisTemplate=redisTemplate;
     }
 
     @Override
@@ -73,5 +82,30 @@ public class UserService implements IUserService {
             return ResultGenerator.genSuccessResult(expiredV);
         }
 
+    }
+
+    @Override
+    public NetResult adminLogin(Employee employee) {
+        if (StringUtil.isEmpty(employee.getUsername())) {
+            return ResultGenerator.genErrorResult(NetCode.USERNAME_INVALID, "用户名不能为空");
+        }
+        if (StringUtil.isEmpty(employee.getPassword())) {
+            return ResultGenerator.genErrorResult(NetCode.PASSWORD_INVALID, "密码不能为空");
+        }
+        employee.setPassword(MD5Util.MD5Encode(employee.getPassword(), "utf-8"));
+        Employee e=employeeMapper.login(employee);
+        if(e==null){
+            return ResultGenerator.genFailResult("账号或密码错误");
+        }
+        else {
+            //生成一个token
+            String token= UUID.randomUUID().toString();
+            logger.info("token__"+token);
+            e.setToken(token);
+            e.setPassword(null);
+            //30分钟token过期
+            redisTemplate.opsForValue().set(token,e,30, TimeUnit.MINUTES);
+            return ResultGenerator.genSuccessResult(e);
+        }
     }
 }

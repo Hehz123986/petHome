@@ -2,6 +2,8 @@ package org.nb.petHome.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 
 /**
  * @description:TODO类描述
@@ -9,7 +11,7 @@ import lombok.Data;
  * @data: 2023/11/1
  **/
 @Data
-public class Employee {
+public class Employee implements Serializable {
     /*主键*/
     private Long id;
     /*员工编号*/
@@ -28,6 +30,7 @@ public class Employee {
     private int state;
 
     private Department department;
+    private String token;
 }
 
 

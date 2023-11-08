@@ -122,10 +122,10 @@ public class ShopController {
     public NetResult paging(@RequestParam("page") int page, @RequestParam("pageSize") int pageSize){
         int count = iShopService.count();
         int offset = (page-1) * pageSize;
-        List<Shop> shopList = iShopService.paging(offset,pageSize);
+        List<Shop> shops = iShopService.paging(offset,pageSize);
         ShopQuery shopQuery=new ShopQuery();
         shopQuery.total=count;
-        shopQuery.shopList=shopList;
+        shopQuery.shops=shops;
         return ResultGenerator.genSuccessResult(shopQuery);
     }
 }
