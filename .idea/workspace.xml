@@ -6,21 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="a62b7293-c1d1-4d14-a572-3354f541f9da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/common/ShopQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/common/ShopQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/TokenConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/TokenConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/controller/ShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/controller/ShopController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/entity/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/net/NetCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/net/NetCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/service/IUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/service/impl/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/common/ShopQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/common/ShopQuery.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/common/Urls.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/common/Urls.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/TokenConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/TokenConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/controller/EmployeeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/controller/ShopController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/controller/ShopController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/entity/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/entity/Employee.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/net/NetCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/net/NetCode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/service/IUserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/service/impl/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/service/impl/UserService.class" afterDir="false" />
@@ -81,22 +75,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.MyApplication">
-    <configuration name="EmployeeServiceTest.updateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="petHome" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.nb.petHome.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.nb.petHome.service" />
-      <option name="MAIN_CLASS_NAME" value="org.nb.petHome.service.EmployeeServiceTest" />
-      <option name="METHOD_NAME" value="updateTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RedisTest.delRedis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="petHome" />
       <extension name="coverage">
@@ -145,6 +123,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserMapperTest.testDeleteDepartment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="petHome" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.nb.petHome.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.nb.petHome.mapper" />
+      <option name="MAIN_CLASS_NAME" value="org.nb.petHome.mapper.UserMapperTest" />
+      <option name="METHOD_NAME" value="testDeleteDepartment" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="petHome" />
       <extension name="coverage">
@@ -161,10 +155,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.MyApplication" />
+        <item itemvalue="JUnit.UserMapperTest.testDeleteDepartment" />
         <item itemvalue="JUnit.RedisTest.delRedis" />
         <item itemvalue="JUnit.RedisTest.getRedis" />
         <item itemvalue="JUnit.RedisTest.setRedis" />
-        <item itemvalue="JUnit.EmployeeServiceTest.updateTest" />
       </list>
     </recent_temporary>
   </component>
@@ -182,6 +176,7 @@
       <workItem from="1699110343116" duration="33738000" />
       <workItem from="1699284433891" duration="20727000" />
       <workItem from="1699442527972" duration="3793000" />
+      <workItem from="1699491855738" duration="15980000" />
     </task>
     <servers />
   </component>

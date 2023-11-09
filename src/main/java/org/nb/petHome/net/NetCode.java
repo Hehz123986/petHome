@@ -54,4 +54,8 @@ public class NetCode {
      * token失效，过期
      */
     public static final int TOKEN_INVALID =0x22 ;
+    /**
+     * 无效的年龄
+     */
+    public static final int AGE_INVALID = 0x23;
 }

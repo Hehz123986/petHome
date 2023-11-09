@@ -5,27 +5,18 @@ import org.nb.petHome.entity.CodeResBean;
 import org.nb.petHome.entity.Employee;
 import org.nb.petHome.net.NetCode;
 import org.nb.petHome.net.NetResult;
-import org.nb.petHome.service.IRedisService;
-import org.nb.petHome.service.IUserService;
 import org.nb.petHome.service.impl.RedisService;
 import org.nb.petHome.service.impl.UserService;
-import org.nb.petHome.utils.MD5Util;
 import org.nb.petHome.utils.RegexUtil;
 import org.nb.petHome.utils.ResultGenerator;
 import org.nb.petHome.utils.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-import org.w3c.dom.stylesheets.LinkStyle;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-import java.util.UUID;
-import java.util.concurrent.TimeUnit;
+
 
 /**
  * @description:TODO类描述
@@ -44,7 +35,7 @@ public class LoginController {
     }
 
     @GetMapping("/getverifycode")
-    public NetResult sendVerifyCode(String phone) {
+    public NetResult sendVerifyCode( String phone) {
         return userService.sendRegisterCode(phone);
     }
 
