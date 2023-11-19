@@ -41,5 +41,10 @@ public class ShopMapperTest {
         shopMapper.update(shop);
         System.out.println(shop);
     }
+    @Test
+    public void Test() {
+        Shop shop=shopMapper.findById(30l);
+        System.out.println(shop);
+    }
 
 }

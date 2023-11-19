@@ -19,4 +19,7 @@ public interface IShopService {
     void update(Shop shop);
     List<Shop> paging( int offset, int pageSize);
     int count();
+    Shop findByAddress(String address);
+    void addAdmin(Shop shop,long id);
+    Shop  findById(Long id);
 }

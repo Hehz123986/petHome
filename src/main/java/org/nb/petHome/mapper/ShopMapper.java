@@ -53,4 +53,10 @@ public interface ShopMapper {
 
     @Select("SELECT COUNT(*) FROM t_shop")
     int count();
+
+    @Select("select * from t_shop where address=#{address}")
+    Shop findByAddress(String address);
+
+    @Update("update t_shop set admin_id=#{id} where id=#{shop.id}")
+    void addAdmin(Shop shop,long id);
 }

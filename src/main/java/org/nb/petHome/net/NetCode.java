@@ -58,4 +58,34 @@ public class NetCode {
      * 无效的年龄
      */
     public static final int AGE_INVALID = 0x23;
+    /**
+     * 无效的宠物名
+     */
+    public static final int PET_NAME_INVALID = 0x24;
+    /**
+     * 无效的地址
+     */
+    public static final int ADDRESS_INVALID =0x25 ;
+    /**
+     * 无效的年龄
+     */
+    public static final int BIRTH_INVALID =0x26 ;
+    /**
+     * 无效的ID
+     */
+    public static final int ID_INVALID =0x27 ;
+    /**
+     * 无效的性别
+     */
+    public static final int PET_SEX_INVALID =0x28 ;
+    public static final int PET_IS_INOCULATION_INVALID =0x29 ;
+
+
+
+    public static int PET_Process_ERROR=0x30;
+    public static final int USERLIST_IS_NULL =0x31 ;
+    public static final int SHOP_IS_NULL =0x32;
+    public static final int SHOP_INVALID =0x33 ;
+    public static final int SELL_PRICE_INVALID =0x34;
+    public static final int STATE_NOT_EXIST =0x35 ;
 }

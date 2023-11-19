@@ -1,8 +1,6 @@
 package org.nb.petHome.entity;
-
 import lombok.Data;
-
-import java.util.Date;
+import java.io.Serializable;
 
 /**
  * @description:TODO类描述
@@ -10,16 +8,13 @@ import java.util.Date;
  * @data: 2023/11/9
  **/
 @Data
-public class User {
+public class User implements Serializable {
     private Long id;
     private String username;
     private String email;
     private String phone;
-    private String salt;
     private String password;
-    private int state;
     private int age;
-    private Date createtime =new Date();
-    private String headImg;
+    private Long createtime ;
     private String token;
 }

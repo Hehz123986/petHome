@@ -1,8 +1,10 @@
 package org.nb.petHome.service;
 
-import org.nb.petHome.entity.Employee;
+
 import org.nb.petHome.entity.User;
 import org.nb.petHome.net.NetResult;
+import org.nb.petHome.net.param.LoginParam;
+import org.nb.petHome.net.param.RegisterParam;
 
 /**
  * @description:TODO类描述
@@ -15,9 +17,10 @@ public interface IUserService {
      */
     NetResult sendRegisterCode(String phone);
 
-    NetResult adminLogin(Employee employee);
+    NetResult register(RegisterParam registerParam);
 
-    NetResult register(User user);
+    NetResult Login(LoginParam loginParam);
 
-    NetResult userLogin(User user);
+    User findById(Long id);
+
 }

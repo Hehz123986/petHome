@@ -21,6 +21,6 @@ public interface IEmployeeService {
 
     Employee findById(Long id);
 
-    Employee login(Employee employee);
+    Employee login(String phone,String password);
 
 }

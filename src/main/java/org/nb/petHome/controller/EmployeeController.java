@@ -110,29 +110,7 @@ public class EmployeeController {
         return ResultGenerator.genSuccessResult(employeeList);
     }
 
-    @PostMapping(value = Urls.EMPLOYEE_LOGIN_URL)
-    public NetResult login(@RequestBody Employee employee) {
-        if (StringUtil.isEmpty(employee.getUsername())) {
-            return ResultGenerator.genErrorResult(NetCode.USERNAME_INVALID, "用户名不能为空");
-        }
-        if (StringUtil.isEmpty(employee.getPassword())) {
-            return ResultGenerator.genErrorResult(NetCode.PASSWORD_INVALID, "密码不能为空");
-        }
-        employee.setPassword(MD5Util.MD5Encode(employee.getPassword(), "utf-8"));
-        Employee e=iEmployeeService.login(employee);
-        if(e==null){
-            return ResultGenerator.genFailResult("账号或密码错误");
-        }
-        else {
-            String token= UUID.randomUUID().toString();
-            logger.info("token__"+token);
-            e.setToken(token);
-            e.setPassword(null);
-            redisTemplate.opsForValue().set(token,e,30, TimeUnit.MINUTES);
-            return ResultGenerator.genSuccessResult(e);
-        }
 
-    }
 
 
 }

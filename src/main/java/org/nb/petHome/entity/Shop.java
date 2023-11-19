@@ -1,9 +1,6 @@
 package org.nb.petHome.entity;
 
 import lombok.Data;
-
-import java.util.Date;
-
 /**
  * @description:TODO类描述
  * @author: hzh
@@ -19,5 +16,9 @@ public class Shop {
     private String address;
     private  String logo;
     private Employee admin;
+    private Long admin_id;
+    private Location location;
+
+
 
 }

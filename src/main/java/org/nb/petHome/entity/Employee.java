@@ -1,10 +1,6 @@
 package org.nb.petHome.entity;
-
 import lombok.Data;
-
 import java.io.Serializable;
-
-
 /**
  * @description:TODO类描述
  * @author: hzh
@@ -28,7 +24,6 @@ public class Employee implements Serializable {
     private int age;
     /* 部门 状态0正常，-1 停用*/
     private int state;
-
     private Department department;
     private String token;
 }

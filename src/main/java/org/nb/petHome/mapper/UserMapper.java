@@ -18,18 +18,17 @@ import org.springframework.stereotype.Repository;
 public interface UserMapper {
 
     /*增加*/
-    @Insert("insert into t_user (username, email, phone, salt, password, state, age, createtime, headImg)" +
-            "values(#{username},#{email},#{phone},#{salt},#{password},#{state},#{age},#{createtime},#{headImg})")
+    @Insert("insert into t_user (username, email, phone, password, age, createtime) values(#{username},#{email},#{phone},#{password},#{age},#{createtime})")
     @Options(useGeneratedKeys = true, keyProperty = "id", keyColumn = "id")
     int register(User user);
 
     @Select("select * from t_user where phone=#{phone}")
     User findByPhone(String phone);
 
-    @Select("select * from t_employee where phone=#{phone} and password=#{password}")
-    User userLogin(User user);
+    @Select("select * from t_user where phone=#{phone} and password=#{password}")
+    User userLogin(String phone,String password);
 
-
-
+    @Select("select * from t_user where id=#{id}")
+    User findById(Long id);
 
 }
