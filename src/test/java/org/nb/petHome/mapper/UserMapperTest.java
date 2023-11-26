@@ -45,6 +45,11 @@ public class UserMapperTest {
         user.setPassword("2");
         System.out.println(userMapper.userLogin("123","2"));
     }
+    @Test
+    public void test1() {
+        userMapper.update(99.8,11l,2l);
+    }
+
 
 
 }

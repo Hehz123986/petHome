@@ -1,6 +1,7 @@
 package org.nb.petHome.service;
 
 
+import org.apache.ibatis.annotations.Param;
 import org.nb.petHome.entity.User;
 import org.nb.petHome.net.NetResult;
 import org.nb.petHome.net.param.LoginParam;
@@ -22,5 +23,7 @@ public interface IUserService {
     NetResult Login(LoginParam loginParam);
 
     User findById(Long id);
+
+    void update(@Param("price")double price, @Param("product_id")Long product_id, @Param("id")Long id);
 
 }

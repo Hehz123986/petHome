@@ -88,4 +88,7 @@ public class NetCode {
     public static final int SHOP_INVALID =0x33 ;
     public static final int SELL_PRICE_INVALID =0x34;
     public static final int STATE_NOT_EXIST =0x35 ;
+    public static int Count_INVALID=0x36;
+    public static int Price_INVALID=0x37;
+    public static final int STATE_INVALID =0x38 ;
 }

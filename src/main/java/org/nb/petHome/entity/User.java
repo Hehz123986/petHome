@@ -17,4 +17,6 @@ public class User implements Serializable {
     private int age;
     private Long createtime ;
     private String token;
+    private double price;
+    private Long product_id;
 }

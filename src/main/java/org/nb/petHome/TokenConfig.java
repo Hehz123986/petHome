@@ -48,6 +48,10 @@ public class TokenConfig implements WebMvcConfigurer  {
                 "/delist",
                 "/selectPetByUser",
                 "/shelfStatusByUser",
+                "/onProduct",
+                "/offProduct",
+                "/productList",
+                "/buy",
                 "/register",
                 "/verifyCode"
         );

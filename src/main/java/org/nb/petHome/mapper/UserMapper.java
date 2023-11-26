@@ -1,9 +1,6 @@
 package org.nb.petHome.mapper;
 
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.nb.petHome.entity.Employee;
 import org.nb.petHome.entity.User;
 import org.springframework.stereotype.Repository;
@@ -30,5 +27,8 @@ public interface UserMapper {
 
     @Select("select * from t_user where id=#{id}")
     User findById(Long id);
+
+    @Update("update t_user set product_id=#{product_id} , price=#{price} where id=#{id} ")
+    void update(double price,Long product_id,Long id);
 
 }

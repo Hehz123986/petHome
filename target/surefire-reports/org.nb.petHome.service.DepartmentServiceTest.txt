@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.nb.petHome.service.DepartmentServiceTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.377 s <<< FAILURE! - in org.nb.petHome.service.DepartmentServiceTest
+testTree  Time elapsed: 0.36 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.nb.petHome.service.DepartmentServiceTest.testTree(DepartmentServiceTest.java:31)
+

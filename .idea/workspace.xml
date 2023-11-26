@@ -5,56 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a62b7293-c1d1-4d14-a572-3354f541f9da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/entity/PetCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/mapper/PetShopMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/nb/petHome/mapper/PetCategoryMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/entity/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/TokenConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/TokenConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/controller/ShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/controller/ShopController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/entity/CodeResBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/entity/CodeResBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/entity/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/entity/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/entity/Shop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/mapper/EmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/mapper/ShopMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/mapper/ShopMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/net/NetCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/net/NetCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/service/IEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/service/IEmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/service/IShopService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/service/IShopService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/service/impl/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/service/impl/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/service/impl/ShopService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/service/impl/ShopService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/service/impl/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/nb/petHome/utils/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nb/petHome/utils/StringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/nb/petHome/mapper/ShopMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/nb/petHome/mapper/ShopMapperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/nb/petHome/mapper/UserMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/nb/petHome/mapper/UserMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/nb/petHome/t.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/TokenConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/TokenConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/controller/ShopController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/controller/ShopController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/entity/CodeResBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/entity/CodeResBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/entity/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/entity/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/entity/Shop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/entity/Shop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/mapper/EmployeeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/mapper/EmployeeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/mapper/ShopMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/mapper/ShopMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/net/NetCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/net/NetCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/service/IEmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/service/IEmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/service/IShopService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/service/IShopService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/service/IUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/service/impl/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/service/impl/EmployeeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/service/impl/ShopService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/service/impl/ShopService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/service/impl/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/service/impl/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/nb/petHome/mapper/ShopMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/nb/petHome/mapper/ShopMapperTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/nb/petHome/utils/RandomCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/nb/petHome/utils/RandomCode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/org/nb/petHome/mapper/UserMapperTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/nb/petHome/mapper/UserMapperTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/nb/petHome/t.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,24 +63,60 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lqh_project-main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jobDemo" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\H\Desktop\petHome\src\main\java\org\nb\petHome\quartz\configuration" />
+      <recent name="C:\Users\H\Desktop\petHome\src\main\java\org\nb\petHome\quartz" />
       <recent name="C:\Users\H\Desktop\petHome\src\main\java\org\nb\petHome" />
       <recent name="C:\Users\H\Desktop\petHome\src\main\java\org\nb\petHome\service\impl" />
       <recent name="C:\Users\H\Desktop\petHome\src\main\java\org\nb\petHome\service" />
-      <recent name="C:\Users\H\Desktop\petHome\src\test\java\org\nb\petHome\mapper" />
-      <recent name="C:\Users\H\Desktop\petHome\src\test\java\org\nb\petHome" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.nb.petHome" />
+      <recent name="org.nb.petHome.mapper" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.nb.petHome.common" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.MyApplication">
-    <configuration name="PetShopMapperTest.addTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FactoryPatternDemo.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="petHome" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.nb.petHome.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.nb.petHome" />
+      <option name="MAIN_CLASS_NAME" value="org.nb.petHome.FactoryPatternDemo" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PhoneTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="petHome" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.nb.petHome.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.nb.petHome" />
+      <option name="MAIN_CLASS_NAME" value="org.nb.petHome.PhoneTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductMapperTest.addTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="petHome" />
       <extension name="coverage">
         <pattern>
@@ -122,14 +125,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.nb.petHome.mapper" />
-      <option name="MAIN_CLASS_NAME" value="org.nb.petHome.mapper.PetShopMapperTest" />
+      <option name="MAIN_CLASS_NAME" value="org.nb.petHome.mapper.ProductMapperTest" />
       <option name="METHOD_NAME" value="addTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShopMapperTest.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserMapperTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="petHome" />
       <extension name="coverage">
         <pattern>
@@ -138,40 +141,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.nb.petHome.mapper" />
-      <option name="MAIN_CLASS_NAME" value="org.nb.petHome.mapper.ShopMapperTest" />
-      <option name="METHOD_NAME" value="Test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserMsgMapperTest.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="petHome" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.nb.petHome.mapper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.nb.petHome.mapper" />
-      <option name="MAIN_CLASS_NAME" value="org.nb.petHome.mapper.UserMsgMapperTest" />
-      <option name="METHOD_NAME" value="testAdd" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserMsgMapperTest.testFindByState" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="petHome" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.nb.petHome.mapper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.nb.petHome.mapper" />
-      <option name="MAIN_CLASS_NAME" value="org.nb.petHome.mapper.UserMsgMapperTest" />
-      <option name="METHOD_NAME" value="testFindByState" />
+      <option name="MAIN_CLASS_NAME" value="org.nb.petHome.mapper.UserMapperTest" />
+      <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -193,10 +164,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.MyApplication" />
-        <item itemvalue="JUnit.ShopMapperTest.Test" />
-        <item itemvalue="JUnit.PetShopMapperTest.addTest" />
-        <item itemvalue="JUnit.UserMsgMapperTest.testAdd" />
-        <item itemvalue="JUnit.UserMsgMapperTest.testFindByState" />
+        <item itemvalue="JUnit.UserMapperTest.test1" />
+        <item itemvalue="JUnit.ProductMapperTest.addTest" />
+        <item itemvalue="JUnit.FactoryPatternDemo.test" />
+        <item itemvalue="JUnit.PhoneTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +195,15 @@
       <workItem from="1700182832490" duration="8164000" />
       <workItem from="1700285856262" duration="4358000" />
       <workItem from="1700380705926" duration="4388000" />
-      <workItem from="1700385154111" duration="1176000" />
+      <workItem from="1700385154111" duration="1885000" />
+      <workItem from="1700390461711" duration="7523000" />
+      <workItem from="1700485286570" duration="10000" />
+      <workItem from="1700486438359" duration="8497000" />
+      <workItem from="1700498250971" duration="998000" />
+      <workItem from="1700499536765" duration="701000" />
+      <workItem from="1700500302164" duration="1722000" />
+      <workItem from="1700527957884" duration="3122000" />
+      <workItem from="1700979393470" duration="15817000" />
     </task>
     <servers />
   </component>

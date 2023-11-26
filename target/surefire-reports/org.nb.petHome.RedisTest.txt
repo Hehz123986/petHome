@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: org.nb.petHome.RedisTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 1.136 s <<< FAILURE! - in org.nb.petHome.RedisTest
+delRedis  Time elapsed: 1.111 s  <<< ERROR!
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+	at org.nb.petHome.RedisTest.delRedis(RedisTest.java:47)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+	at org.nb.petHome.RedisTest.delRedis(RedisTest.java:47)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+
+setRedis  Time elapsed: 0.01 s  <<< ERROR!
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+	at org.nb.petHome.RedisTest.setRedis(RedisTest.java:27)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+	at org.nb.petHome.RedisTest.setRedis(RedisTest.java:27)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+
+getRedis  Time elapsed: 0.012 s  <<< ERROR!
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+	at org.nb.petHome.RedisTest.getRedis(RedisTest.java:35)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to localhost:6379
+	at org.nb.petHome.RedisTest.getRedis(RedisTest.java:35)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: localhost/127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+

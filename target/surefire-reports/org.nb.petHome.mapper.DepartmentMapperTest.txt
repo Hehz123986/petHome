@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.nb.petHome.mapper.DepartmentMapperTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 14.809 s <<< FAILURE! - in org.nb.petHome.mapper.DepartmentMapperTest
+testUpdateDepartment  Time elapsed: 0.034 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.nb.petHome.mapper.DepartmentMapperTest.testUpdateDepartment(DepartmentMapperTest.java:67)
+

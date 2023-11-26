@@ -2,6 +2,7 @@ package org.nb.petHome.service.impl;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
+import org.apache.ibatis.annotations.Param;
 import org.nb.petHome.entity.CodeResBean;
 import org.nb.petHome.entity.Employee;
 import org.nb.petHome.entity.User;
@@ -213,6 +214,12 @@ public class UserService implements IUserService {
     @Override
     public User findById(Long id) {
         return userMapper.findById(id);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public  void update(@Param("price")double price,@Param("product_id")Long product_id,@Param("id")Long id){
+        userMapper.update(price,product_id,id);
     }
 
 
